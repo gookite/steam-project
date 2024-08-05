@@ -1,0 +1,79 @@
+/* 푸터 스타일 */
+.footer {
+    color: #fff;
+    width: 100%;
+    height: auto;
+    background-color: #9CC800;
+    display: inline-block;
+    margin: 0; /* 기본 마진 제거 */
+    position: relative; /* 요소의 상대적 위치 설정 */
+    top: 0; /* 위치 조정 */
+}
+
+.footer-nav {
+    margin-left: 100px;
+    margin-top: 50px;
+    display: flex; /* flexbox로 나열 */
+    flex-wrap: wrap; /* 화면 크기에 따라 줄 바꿈을 허용 */
+    background-color: #9CC800;
+}
+
+.footer-nav a {
+    color: #fff; /* 링크 색상 */
+    font-weight: bold;
+    text-decoration: none; /* 링크의 밑줄 제거 */
+    margin-right: 50px; /* 50px 간격으로 나열 */
+    background-color: #9CC800;
+}
+
+.footer-nav a:last-child {
+    margin-right: 0; /* 마지막 링크에는 간격을 적용하지 않음 */
+}
+
+.logo {
+    background-color: #9CC800;
+    margin-left: 90px;
+    margin-top: 77px;
+}
+
+.ft {
+    background-image: url(images/);
+    margin-left: 90px;
+    background-color: #9CC800;
+}
+
+.ft h2 {
+    background-color: #9CC800;
+    margin-top: 3px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.ft h4 {
+    background-color: #9CC800;
+    margin-top: 3px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.sns {
+    float: right;
+    width: 10%;
+    display: flex; /* Flexbox를 사용하여 아이템을 수평으로 배치 */
+    gap: 20px; /* 아이템들 사이의 간격 설정 */
+    flex-wrap: wrap; /* 화면 크기에 따라 줄 바꿈 허용 */
+    justify-content: center; /* 아이템들을 수평 중앙 정렬 */
+    background-color: #9CC800;
+    margin-bottom: 30px;
+}
+
+.sns a {
+    display: block; /* 링크를 블록 요소로 설정하여 이미지가 링크를 감싸도록 함 */
+    background-color: #9CC800;
+}
+
+.sns img {
+    background-color: #9CC800; 
+    max-width: 100%; /* 이미지가 부모 요소의 너비를 초과하지 않도록 설정 */
+    display: block; /* 이미지 하단의 공백 제거 */
+}
