@@ -1,0 +1,283 @@
+/* @font-face 규칙으로 폰트 정의 */
+@font-face {
+  font-family: "NEXON Lv2 Gothic Bold";
+  src: url("assets/fonts/NEXON-Lv2-Gothic-Bold.woff2") format("woff2"),
+    url("assets/fonts/NEXON-Lv2-Gothic-Bold.woff") format("woff"),
+    url("assets/fonts/NEXON-Lv2-Gothic-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 기본 스타일 초기화 */
+body {
+  font-family: Arial, sans-serif; /* 기본 폰트는 Arial로 설정 */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* 수평 스크롤 방지 */
+  background-color: #000;
+  color: #fff;
+}
+
+/* 헤더 스타일 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 141px; /* 헤더 높이 조정 */
+  padding: 10px;
+  background-color: rgba(
+    51,
+    51,
+    51,
+    0.4
+  ); /* 배경색과 투명도 조정 (40% 투명도) */
+  color: #000;
+  z-index: 2; /* 헤더가 GIF 이미지 위에 표시되도록 설정 */
+  position: relative; /* 헤더와 GIF 이미지가 맞닿도록 위치를 상대적으로 설정 */
+  font-family: "esamanru Bold", sans-serif; /* esamanru Bold 폰트를 적용 */
+}
+
+/* 전체 폰트 적용 */
+* {
+  font-family: "NEXON Lv2 Gothic Bold", sans-serif; /* 모든 요소에 NEXON Lv2 Gothic Bold 폰트 적용 */
+}
+
+/* 나머지 스타일은 그대로 유지 */
+
+/* 로고 이미지 */
+.logo img {
+  height: 50px;
+}
+
+/* 내비게이션 메뉴 */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 90px; /* ul 태그들 간의 간격 설정 */
+}
+
+nav ul li {
+  position: relative;
+  margin: 0;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(
+    51,
+    51,
+    51,
+    0.4
+  ); /* 배경색을 헤더와 동일한 40% 투명도로 설정 */
+  color: #fff; /* 텍스트 색상을 흰색으로 설정 */
+  list-style-type: none;
+  padding: 10px; /* 서브메뉴 내부 여백 추가 */
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li ul li a {
+  color: #fff; /* 서브메뉴 항목의 텍스트 색상을 흰색으로 설정 */
+  padding: 10px; /* 서브메뉴 항목의 내부 여백 추가 */
+  display: block; /* 항목을 블록으로 설정하여 클릭 가능 영역 확대 */
+}
+
+nav ul li ul li a:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* 서브메뉴 항목의 호버 상태에서 배경색을 흰색의 10% 투명도로 설정 */
+}
+
+/* 메인 스타일 */
+main {
+  padding: 0; /* 헤더와 GIF 이미지가 맞닿도록 padding 제거 */
+  margin: 0;
+}
+
+/* GIF 이미지 스타일 */
+.gif {
+  position: absolute; /* GIF 이미지를 절대 위치로 설정 */
+  top: 0; /* 화면 상단에 위치 */
+  left: 0; /* 화면 왼쪽에 위치 */
+  width: 100%; /* 화면 전체 너비를 차지하도록 설정 */
+  z-index: 1; /* GIF 이미지가 헤더 아래에 위치하도록 설정 */
+}
+
+.gif img {
+  width: 100%; /* 이미지의 너비를 100%로 설정하여 화면에 맞게 조절 */
+  height: auto; /* 이미지의 높이를 자동으로 조절 */
+  display: block;
+  margin: 0; /* margin 제거 */
+}
+
+/* 기본 버튼 스타일 */
+.header-buttons a {
+  margin-left: 10px;
+  color: white; /* 버튼 텍스트 색상 설정 */
+  text-decoration: none; /* 텍스트 장식 제거 */
+  font-family: Arial, sans-serif; /* 기본 폰트 적용 */
+}
+
+/* 버튼 스타일 */
+.button {
+  position: absolute; /* 버튼을 절대 위치로 설정 */
+  top: 800px; /* GIF 이미지 위에서부터 800px 떨어진 위치 설정 */
+  right: 187px; /* GIF 이미지 오른쪽에서부터 187px 떨어진 위치 설정 */
+  z-index: 2; /* 버튼이 GIF 이미지 위에 위치하도록 설정 */
+  width: 135px; /* 버튼 너비 설정 */
+  height: 48px; /* 버튼 높이 설정 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent; /* 배경색을 투명하게 설정 */
+  border: 1px solid white; /* 테두리 색상과 두께 설정 (1px 흰색) */
+  border-radius: 5px; /* 버튼 모서리를 둥글게 설정 (선택 사항) */
+  box-sizing: border-box; /* 패딩과 테두리를 포함한 전체 크기 설정 */
+}
+
+.button a {
+  display: inline-block;
+  padding: 0; /* 패딩 제거 */
+  color: white; /* 버튼 텍스트 색상 설정 */
+  text-decoration: none; /* 텍스트 장식 제거 */
+  border-radius: 5px; /* 버튼의 모서리를 둥글게 설정 (선택 사항) */
+  line-height: 48px; /* 버튼의 높이에 맞춰 텍스트 수직 정렬 */
+}
+
+/* circle-container 스타일 */
+.circle-container {
+  position: absolute; /* 화면에 고정된 위치 */
+  top: 1348px; /* 200px 아래로 이동한 위치 */
+  left: 50%; /* 화면의 가로 중앙에 배치 */
+  transform: translateX(-50%); /* 정확히 중앙에 위치시키기 위한 변환 */
+  z-index: 10; /* 다른 콘텐츠 위에 표시되도록 설정 */
+}
+
+.circle {
+  position: relative; /* circle 이미지의 위치를 상대적으로 설정 */
+  z-index: 0; /* circle 이미지가 steam-vector 이미지 아래에 위치하도록 설정 */
+}
+
+.circle img {
+  max-width: 100%;
+}
+
+/* steam-vector 스타일 */
+.on-circle {
+  position: absolute; /* steam-vector 이미지의 위치를 절대적으로 설정 */
+  top: 50%; /* circle 이미지의 중앙에 맞춰 위치 설정 */
+  left: 50%; /* 가운데 정렬 */
+  transform: translate(-50%, -50%); /* 중앙 정렬을 위한 변환 */
+  z-index: 1; /* steam-vector 이미지가 circle 이미지 위에 위치하도록 설정 */
+}
+
+.on-circle img {
+  width: 964px; /* steam-vector 이미지의 가로 크기 설정 */
+  height: 185px; /* steam-vector 이미지의 세로 크기 설정 */
+}
+
+/* 텍스트 스타일 */
+.txt {
+  position: absolute; /* 절대 위치 설정 */
+  top: 1700px;
+  left: 50%; /* 화면의 가로 중앙에 배치 */
+  transform: translateX(-50%); /* 중앙 정렬을 위한 변환 */
+  color: #fff; /* 흰색 텍스트 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  z-index: 10; /* 다른 콘텐츠 위에 표시되도록 설정 */
+  width: 80%; /* 텍스트 블록의 너비를 설정 (선택 사항) */
+}
+
+/* 배너 스타일 */
+.banner {
+  position: relative; /* 배너를 상대 위치로 설정 */
+  top: 2200px; /* 화면 위에서 2200px 떨어진 위치 설정 */
+  left: 50%; /* 화면의 가로 중앙에 배치 */
+  width: 100%;
+  transform: translateX(-50%); /* 정확히 중앙에 위치시키기 위한 변환 */
+  display: flex; /* 배너를 flex 컨테이너로 설정 */
+  flex-direction: column; /* 세로 방향으로 배치 */
+  align-items: center; /* 배너 아이템 중앙 정렬 */
+  margin-top: 20px;
+  z-index: 1; /* 배너의 z-index를 낮게 설정 */
+}
+
+.banner-item {
+  position: relative; /* 배너 아이템의 기준 위치 설정 */
+  width: 100%; /* 배너 항목의 너비를 100%로 설정 */
+  display: flex; /* 배너 항목을 flex 컨테이너로 설정 */
+  justify-content: center; /* 항목 중앙 정렬 */
+}
+
+.banner img {
+  display: block; /* 블록 레벨 요소로 설정 */
+  width: 100%; /* 배너 항목의 너비를 100%로 설정 */
+  height: auto; /* 이미지 높이를 자동으로 조절 */
+}
+
+/* 배너 텍스트 스타일 */
+.banner-text {
+  position: absolute; /* 텍스트를 절대 위치로 설정 */
+  top: 50%; /* 배너 아이템의 수직 중앙에 배치 */
+  left: 0; /* 배너 아이템의 왼쪽에 배치 */
+  transform: translateY(-50%); /* 수직 중앙 정렬을 위한 변환 */
+  color: #fff; /* 흰색 텍스트 */
+  text-align: left; /* 텍스트 왼쪽 정렬 */
+  width: 80%; /* 텍스트 블록의 너비 설정 */
+  z-index: 2; /* 텍스트가 이미지 위에 표시되도록 설정 */
+  padding: 0 10px; /* 텍스트 블록의 좌우 패딩 추가 (선택 사항) */
+}
+
+/* 베스트셀러 스타일 */
+.bestseller {
+  position: absolute; /* 베스트셀러를 절대 위치로 설정 */
+  top: 2200px; /* 배너 위에서 100px 위로 이동한 위치 설정 */
+  left: 0; /* 화면의 가로 왼쪽에 배치 */
+  color: #fff; /* 흰색 텍스트 */
+  text-align: left; /* 텍스트 왼쪽 정렬 */
+  z-index: 3; /* 베스트셀러가 배너 위에 표시되도록 설정 */
+  padding: 20px; /* 내부 여백 설정 (선택 사항) */
+}
+
+.bestseller-title {
+  font-size: 20px; /* 제목 폰트 크기 설정 */
+  margin: 0; /* 기본 마진 제거 */
+}
+
+.bestseller-description {
+  font-size: 36px; /* 설명 폰트 크기 설정 */
+  margin: 0; /* 기본 마진 제거 */
+  line-height: 1.2; /* 줄 간격 조정 */
+}
+/* 베스트셀러 제목 스타일 */
+.bestseller-title {
+  font-size: 16px; /* 제목 폰트 크기 설정 */
+  margin: 0; /* 기본 마진 제거 */
+  margin-bottom: 20px; /* 제목과 설명 사이의 간격을 설정 */
+}
+
+/* 베스트셀러 설명 스타일 */
+.bestseller-description {
+  font-size: 36px; /* 설명 폰트 크기 설정 */
+  margin: 0; /* 기본 마진 제거 */
+  line-height: 1.5; /* 줄 간격 조정 */
+}
